@@ -2,6 +2,8 @@
 <img width="100" alt="Screenshot 2024-09-21 at 6 58 49 PM" src="https://github.com/user-attachments/assets/cbaecca2-1610-4a2e-a174-18c0e5ef6ac9">
 
 An iOS application that replicates the core functionality of the popular BeReal social media platform, built using Parse and hosted on Back4App. This was created in an iOS 102 class by CodePath. The course helped me gain a deeper understanding of mobile development.
+Caution: Some deprecated functions in the application.
+Future goals: Revisit and add more features.
 
 ## Description
 
