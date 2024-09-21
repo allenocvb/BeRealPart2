@@ -1,59 +1,65 @@
-# Project 3 - *BeRealPart2*
+# BeReal Clone
+<img width="100" alt="Screenshot 2024-09-21 at 6 58 49 PM" src="https://github.com/user-attachments/assets/cbaecca2-1610-4a2e-a174-18c0e5ef6ac9">
 
-Submitted by: **Allen Odoom**
+An iOS application that replicates the core functionality of the popular BeReal social media platform, built using Parse and hosted on Back4App. This was created in an iOS 102 class by CodePath. The course helped me gain a deeper understanding of mobile development.
 
-**BeRealPart2** is an app that introduces persistence and some cool BeReal functionality to the app. [TODO] 
+## Description
 
-Time spent: **5** hours spent in total
+This BeReal clone is an iOS app that allows users to capture and share moments of their day within a 24-hour window. The app encourages authentic sharing by implementing a unique viewing restriction - users can only see others' posts after uploading their own photo within the given timeframe. It uses Parse as the backend, hosted on Back4App, to handle user authentication, data storage, and retrieval.
 
-## Required Features
+## Features
 
-The following **required** functionality is completed:
+- **User Authentication**: Users can sign up, log in, and log out. The app supports persistent login across app launches.
+- **Photo Capture**: Users can select photos from their device's photo library.
+- **Time-Sensitive Sharing**: Posts are only visible to others if the user has shared within the last 24 hours.
+- **Location and Time Metadata**: Each post includes timestamp information.
+- **Comment Section**: Users can interact with posts through comments, which display usernames.
+- **Server-Side Persistence**: Ensures reliable storage and retrieval of photos and post data using Parse and Back4App.
 
-- [x] User can launch camera to take photo instead of photo library
-  - [x] Users without iPhones to demo this feature can manually add unique photos to their simulator's Photos app
-- [ ] Users can intereact with posts via comments, comments will have user data such as username and name
-- [x] Posts have a time and location attached to them
-- [x] Users are not able to see other photos until they post their own (within 24 hours)	
- 
-The following **optional** features are implemented:
+## Technologies Used
 
-- [ ] User receive notifcation when it is time to post
+- Swift
+- UIKit
+- Parse Swift SDK
+- Back4App (Parse Server host)
+- PhotosUI (PHPickerViewController)
+- AlamofireImage (for asynchronous image loading)
 
-The following **additional** features are implemented:
+## Setup
 
-- [ ] List anything else that you can get done to improve the app functionality!
+1. Clone this repository
+2. Open the project in Xcode
+3. Install necessary dependencies using Swift Package Manager
+4. Set up a Parse Server on Back4App:
+   - Create an account on [Back4App](https://www.back4app.com/)
+   - Create a new app in the Back4App dashboard
+   - Note your Parse API Address, Application ID, and Client Key
+5. In the `AppDelegate.swift` file, initialize Parse with your Back4App credentials:
 
-## Video Walkthrough
+```swift
+ParseSwift.initialize(applicationId: "YOUR_APPLICATION_ID",
+                      clientKey: "YOUR_CLIENT_KEY",
+                      serverURL: URL(string: "YOUR_SERVER_URL")!)
+```
 
-<div>
-    <a href="https://www.loom.com/share/0bf0b4e222c44416b8382e9a0a30bd7b">
-    </a>
-    <a href="https://www.loom.com/share/0bf0b4e222c44416b8382e9a0a30bd7b">
-      <img style="max-width:300px;" src="https://cdn.loom.com/sessions/thumbnails/0bf0b4e222c44416b8382e9a0a30bd7b-with-play.gif">
-    </a>
-  </div>
+6. Build and run the app on your iOS device or simulator
 
-Here is a reminder on how to embed Loom videos on GitHub. Feel free to remove this reminder once you upload your README. 
+## Usage
 
-[Guide]](https://www.youtube.com/watch?v=GA92eKlYio4) .
-
-## Notes
-
-Describe any challenges encountered while building the app.
+1. Launch the app
+2. Sign up for a new account or log in with existing credentials
+3. Tap the "+" button to create a new post
+4. Select a photo from your photo library
+5. Add a caption and post
+6. View and interact with posts in your feed
 
 ## License
 
-    Copyright [yyyy] [name of copyright owner]
+This project is licensed under the Apache License, Version 2.0. See the [LICENSE](LICENSE) file for details.
 
-    Licensed under the Apache License, Version 2.0 (the "License");
-    you may not use this file except in compliance with the License.
-    You may obtain a copy of the License at
+## Acknowledgments
 
-        http://www.apache.org/licenses/LICENSE-2.0
-
-    Unless required by applicable law or agreed to in writing, software
-    distributed under the License is distributed on an "AS IS" BASIS,
-    WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
-    See the License for the specific language governing permissions and
-    limitations under the License.
+- Inspired by the original BeReal app
+- Built using Parse and hosted on Back4App
+- Uses AlamofireImage for efficient image loading
+- Thanks to the Parse community for their excellent documentation and support
